@@ -6,7 +6,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 # ---------------- GOOGLE SHEET CONFIG ----------------
-SHEET_NAME = os.getenv("linkgame")
+SHEET_NAME = os.getenv("SHEET_NAME")
 GOOGLE_CRED_JSON = os.getenv("GOOGLE_CRED_JSON")
 
 if not SHEET_NAME or not GOOGLE_CRED_JSON:
@@ -125,3 +125,4 @@ async def random_game(ctx):
 
 # ---------------- RUN BOT ----------------
 bot.run(DISCORD_TOKEN)
+
